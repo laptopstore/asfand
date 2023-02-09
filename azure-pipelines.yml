@@ -17,3 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+jobs:
+-job: job 1
+  steps: 
+  - script: echo job1 Hello, word 
+  - script: echo job1 Hello , word
+-job : job 2
+depandsOn:job1
+  steps :
+  -script: echo job2 hello, word 
